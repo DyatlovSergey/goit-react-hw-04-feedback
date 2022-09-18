@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./FeedbackForm.module.css";
+import s from "../Components/FeedbackForm/FeedbackForm.module.css";
 
 const Statistics = ({ options, totalFeedback, positiveFeedback }) => (
   <ul>

@@ -1,13 +1,12 @@
 import React from "react";
 import s from "./FeedbackForm.module.css";
-import Statistics from "./Statistics";
-import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
-import Section from "./Section";
-import Notification from "./Notification";
-
+import Statistics from "../Statistics";
+import FeedbackOptions from "../FeedbackOptions/FeedbackOptions";
+import Section from "../Section";
+import Notification from "../Notification";
 import { useState } from "react";
 
-const FeedbackForm = () => {
+export default function FeedbackForm() {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
@@ -30,33 +29,9 @@ const FeedbackForm = () => {
     }
   };
 
-  // class FeedbackForm extends React.Component {
-  //   state = {
-  //     good: 0,
-  //     neutral: 0,
-  //     bad: 0,
-  //   };
-
-  //   handleClick = (button) => {
-  //     this.setState({ [button]: this.state[button] + 1 });
-  //   };
-  //
-  // totalFeedback = () => {
-  //   const { good, bad, neutral } = this.state;
-  //   return good + neutral + bad;
-  // };
-
   const totalFeedback = () => {
     return good + neutral + bad;
   };
-
-  // positiveFeedback = () => {
-  //   const { good } = this.state;
-  //   if (!good) {
-  //     return 0;
-  //   }
-  //   return ((good * 100) / this.totalFeedback()).toFixed(0);
-  // };
 
   const positiveFeedback = () => {
     if (!good) {
@@ -65,9 +40,6 @@ const FeedbackForm = () => {
 
     return ((good * 100) / totalFeedback()).toFixed(0);
   };
-
-  // render() {
-  //   const { good, neutral, bad } = this.state;
 
   return (
     <div className={s.container}>
@@ -91,7 +63,6 @@ const FeedbackForm = () => {
       )}
     </div>
   );
-  // }
-  // }
-};
-export default FeedbackForm;
+}
+
+// export default FeedbackForm;

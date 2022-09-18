@@ -1,5 +1,4 @@
 import React from "react";
-// import s from "./FeedbackForm.module.css";
 import propTypes from "prop-types";
 import s from "./FeedbackOptions.module.css";
 

@@ -1,4 +1,4 @@
-import FeedbackForm from "./Components/FeedbackForm";
+import FeedbackForm from "./Components/FeedbackForm/FeedbackForm";
 function App() {
   return <FeedbackForm />;
 }
